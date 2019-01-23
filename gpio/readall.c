@@ -131,13 +131,13 @@ static int physToWpi [64] =
   13,   6,   //21, 22
   14,  10,   //23, 24
   -1,  11,   //25, 26
-  30,  31,   //27, 28
-  21,  -1,   //29, 30
-  22,  26,   //31, 32
-  23,  -1,   //33, 34
-  24,  27,   //35, 36
-  25,  28,   //37, 38
-  -1,  29,   //39, 40
+  -1,  -1,   //27, 28
+  -1,  -1,   //29, 30
+  -1,  -1,   //31, 32
+  -1,  -1,   //33, 34
+  -1,  -1,   //35, 36
+  -1,  -1,   //37, 38
+  -1,  -1,   //39, 40
    -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, //41-> 55
    -1, -1, -1, -1, -1, -1, -1, -1 // 56-> 63
 } ;
@@ -186,30 +186,30 @@ static char *physNames [64] =
  "    3.3v", "5v      ",
  "   SDA.0", "5V      ",
  "   SCL.0", "0v      ",
- "    PWM1", "PC5     ",
- "     GND", "PC6     ",
- "    RxD2", "PD14    ",
+ "    PWM1", "TxD1    ",
+ "     GND", "RxD1    ",
+ "    RxD2", "PA07    ",
  "    TxD2", "GND     ",
- "    CTS2", "PC4     ",
- "    3.3v", "PC7     ",
+ "    CTS2", "SDA.1   ",
+ "    3.3v", "SCL.1   ",
  "   MOSI1", "GND     ",
  "   MISO1", "RTS2    ",
  "   SCLK1", "CS1     ",
- "     GND", "PA21    ",
- "   SDA.1", "SCL.1   ",
- "     PA7", "GND     ",
- "     PA8", "RTS1    ",
- "     PA9", "GND     ",
- "    PA10", "CTS1    ",
- "    PD11", "TxD1    ",
- "     GND", "RxD1    ",
+ "     GND", "PA10    ",
        NULL, NULL,
        NULL, NULL,
        NULL, NULL,
        NULL, NULL,
        NULL, NULL,
-  "GPIO.17", "GPIO.18",
-  "GPIO.19", "GPIO.20",
+       NULL, NULL,
+       NULL, NULL,
+       NULL, NULL,
+       NULL, NULL,
+       NULL, NULL,
+       NULL, NULL,
+       NULL, NULL,
+       NULL, NULL,
+       NULL, NULL,
    NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,
 } ;
 // guenter ende
@@ -388,7 +388,7 @@ void OrangePiReadAll(void)
   printf (" +-----+-----+----------+------+---+-Orange Pi+---+---+------+---------+-----+--+\n") ;
   printf (" | BCM | wPi |   Name   | Mode | V | Physical | V | Mode | Name     | wPi | BCM |\n") ;
   printf (" +-----+-----+----------+------+---+----++----+---+------+----------+-----+-----+\n") ;
-  for (pin = 1 ; pin <= 40 ; pin += 2)
+  for (pin = 1 ; pin <= 26 ; pin += 2)
     readallPhys (pin) ;
   printf (" +-----+-----+----------+------+---+----++----+---+------+----------+-----+-----+\n") ;
   printf (" | BCM | wPi |   Name   | Mode | V | Physical | V | Mode | Name     | wPi | BCM |\n") ;
