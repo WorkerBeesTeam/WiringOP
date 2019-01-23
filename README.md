@@ -5,7 +5,7 @@ Test for OrangePi Zero Plus H5
 
 ## Download
 ### For Orangepi Pi
-    git clone https://github.com/lirik90/WiringOP.git -b h5
+    git clone https://github.com/WorkerBeesTeam/WiringOP.git -b h5
 ## Installation
     cd WiringOP
     chmod +x ./build
